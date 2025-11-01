@@ -4,6 +4,14 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
+.botaoProjeto:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+.botaoVerProjeto:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
 @media screen and (min-width: 280px) {
 .modalFundo {
   position: fixed;
@@ -458,8 +466,6 @@
 
 }
 
-
-
 @media screen and (min-width: 2560px) {
 .modalFundo {
   position: fixed;
@@ -610,11 +616,6 @@
 }
 
 }
-
-
-
-
-
 
 
 @keyframes fadeIn {

@@ -7,12 +7,16 @@ import fotoTh from "../../image/fotoTh.JPG";
 import semDor from "../../image/semdor.jpg";
 
 // import Components
-import BotaoEnviar from "../ArquivosJSX/BotaoEnivar";
+import BotaoEnviar from "../ArquivosJSX/BotaoEnviar";
 import EstacionamentoProjeto from "../ArquivosJSX/EstacionamentoProjeto";
 import SemDorProjeto from "../ArquivosJSX/SemDorProjeto";
 
 function Main({ language, activeSection }) {
   const [projetoAtivo, setProjetoAtivo] = useState(null);
+
+  const [nome, setNome] = useState("");
+const [telefone, setTelefone] = useState("");
+const [mensagem, setMensagem] = useState("");
 
   const primeiroQuadradoRef = useRef(null);
   const quadradoUm = useRef(null);
@@ -140,7 +144,7 @@ function Main({ language, activeSection }) {
   }
 
   return (
-    <body>
+
     <main>
       {/* --- INÍCIO --- */}
       <section
@@ -180,14 +184,6 @@ function Main({ language, activeSection }) {
             </div>
           </div>
         </section>
-        <section className={styles.terceiroQuadrado}>
-          <div className={styles.textoQuadradoCurriculo}>
-          <h1>{translation[language].curriculo}</h1>
-          </div>
-          <div className={styles.quadradoBaixarCurriculo}>
-          <button><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 12.5V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.1198 22 8.79986 22H12.5M14 11H8M10 15H8M16 7H8M15 19L18 22M18 22L21 19M18 22V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
-          </div>
-          </section>
       </section>
 
       {/* --- PROJETOS --- */}
@@ -215,41 +211,52 @@ function Main({ language, activeSection }) {
 
       {/* --- CONTATO --- */}
       <section
-        className={style.contato}
-        style={{ display: activeSection === "contato" ? "flex" : "none" }}
-      >
+        className={style.contato} style={{ display: activeSection === "contato" ? "flex" : "none" }} >
         <div className={style.quadradoMainContato}>
           <div className={style.quadradoMainContantoUm}>
             <p>{translation[language].NomeContato}</p>
             <input
               type="text"
-              id="nome"
               className={style.inputName}
               placeholder={translation[language].placeholderNome}
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
             />
           </div>
+
           <div className={style.quadradoMainContantoUm}>
             <p>{translation[language].TelContato}</p>
             <input
               type="tel"
-              id="telefone"
-              inputMode="numeric"
-              pattern="[0-9]{11}"
-              maxLength="11"
               className={style.inputTel}
               placeholder={translation[language].placeholderTel}
+              value={telefone}
+              maxLength={11}
+              onChange={(e) => {
+                const value = e.target.value.replace(/\D/g, "");
+                setTelefone(value);
+              }}
             />
           </div>
+
           <div className={style.quadradoMainContantoUm}>
             <p>{translation[language].MsgContato}</p>
             <textarea
-              id="mensagem"
               className={style.inputMensagem}
               placeholder={translation[language].placeholderMsg}
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
             />
           </div>
+
           <div className={style.quadradoMainContantoUm}>
-            <BotaoEnviar translation={translation} language={language} />
+            <BotaoEnviar
+              translation={translation}
+              language={language}
+              nome={nome}
+              telefone={telefone}
+              mensagem={mensagem}
+            />
           </div>
         </div>
       </section>
@@ -271,7 +278,7 @@ function Main({ language, activeSection }) {
 )}
 
     </main>
-    </body>
+
     
   );
 }

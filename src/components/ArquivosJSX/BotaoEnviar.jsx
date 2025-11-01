@@ -1,11 +1,5 @@
-import React from "react";
-
-function BotaoEnviar({ translation, language }) {
+function BotaoEnviar({ translation, language, nome, telefone, mensagem }) {
   const handleClick = () => {
-    const nome = document.getElementById("nome").value.trim();
-    const telefone = document.getElementById("telefone").value.trim();
-    const mensagem = document.getElementById("mensagem").value.trim();
-
     if (!nome || !telefone || !mensagem) {
       alert("Preencha todos os campos antes de enviar!");
       return;
@@ -13,8 +7,8 @@ function BotaoEnviar({ translation, language }) {
 
     const numeroWhatsApp = "5512988203607";
     const texto = `*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Mensagem:* ${mensagem}`;
-    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
 
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank");
   };
 
