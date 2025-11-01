@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Belanosima:wght@400;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Klee+One&family=Kode+Mono:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 280px) {
+.projetos, .contato {
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 9pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 10pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 2rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}
+
+@media screen and (min-width: 360px) {
+.projetos, .contato {
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 9rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 9pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 10pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 2rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+.projetos, .contato {
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 14rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 15pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 10pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 2rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}
+
+@media screen and (min-width: 900px) {
+.projetos, .contato {
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 20rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 15pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 10pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 2rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+.projetos, .contato {
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 25rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 15pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 10pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 2rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}
+
+@media screen and (min-width: 2560px) {
+.projetos, .contato {
+    top: 1rem;
+    display: none;
+    width: 100%;
+    height: 90dvh;
+    animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quadradoMainProjetos {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 90%;
+    height: 80dvh;
+}
+
+.textoQuadradoMainProjetos {
+    color: #fff;
+    font-size: 15pt;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.ProjetosQuadrados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    animation: aparecerProjetos 1s ease-in-out;
+}
+
+@keyframes aparecerProjetos {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 10rem;
+    }
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+.quadradoProjetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 25rem;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.quadradoProjetos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quadradoProjetos p {
+    font-size: 15pt;
+    color: #fff;
+    width: 100%;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quadradoMainContato {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    width: 50%;
+    height: 80dvh;
+    box-sizing: border-box;
+}
+
+.quadradoMainContantoUm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.quadradoMainContantoUm p {
+    font-size: 20pt;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.quadradoMainContantoUm input {
+    width: 100%;
+    height: 3rem;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm input:focus, .inputMensagem:focus {
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 10pt;
+    color: #4D3069;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+}
+
+.inputMensagem {
+    width: 100%;
+    height: 7rem;
+    resize: none;
+    padding: 5px;
+    border: solid 1px #4D3069;
+    background: #261733;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 10dfasfdsdfspt;
+    padding: 1px 0 0 10px;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button {
+    width: 100%;
+    background: #800DF2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0 0 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.quadradoMainContantoUm button:focus {
+    box-shadow: inset 0px 0px 20px #1a0035
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+}

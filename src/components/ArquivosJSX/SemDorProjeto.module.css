@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Belanosima:wght@400;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Klee+One&family=Kode+Mono:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+@media screen and (min-width: 280px) {
+.modalFundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1221;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp .5s ease-in;
+}
+
+.modalConteudo.fechar {
+  animation: slideDown .5s ease-in forwards;
+}
+
+.modalConteudoHeader {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+
+.botaoFechar {
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.modalConteudo img {
+    width: 100%;
+    height: auto;
+}
+
+.modalConteudoTextos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTextos h2, p {
+    margin: .5rem 0 0.5rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modalConteudoTextos p {
+    font-size: 10pt;
+}
+
+.modalConteudoTextos h2 {
+    text-transform: uppercase;
+    font-size: 13pt;
+}
+
+.modalConteudoTecnologias {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 5rem;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTecnologias h2 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.quadradoSkills {
+    display: flex;
+    width: 7rem;
+    height: 2rem;
+    background: #36214A;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+}
+
+.quadradoSkills p {
+    font-size: 10pt;
+    margin: auto;
+    font-weight: 500;
+}
+
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    margin: 0;
+}
+
+.botaoProjeto {
+    display: flex;
+    background-color: #8012ED;
+    color: white;
+    width: auto;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoVerProjeto {
+    display: flex;
+    background-color: #36214A;
+    color: white;
+    width: auto;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@media screen and (min-width: 360px) {
+.modalFundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1221;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp .5s ease-in;
+}
+
+.modalConteudo.fechar {
+  animation: slideDown .5s ease-in forwards;
+}
+
+.modalConteudoHeader {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+.botaoFechar {
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.modalConteudo img {
+    width: 100%;
+    height: auto;
+}
+
+.modalConteudoTextos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTextos h2, p {
+    margin: .5rem 0 0.5rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modalConteudoTextos p {
+    font-size: 11pt;
+}
+
+.modalConteudoTextos h2 {
+    text-transform: uppercase;
+    font-size: 15pt;
+}
+
+.modalConteudoTecnologias {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 5rem;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTecnologias h2 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.quadradoSkills {
+    display: flex;
+    width: 7rem;
+    height: 2rem;
+    background: #36214A;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+}
+
+.quadradoSkills p {
+    font-size: 10pt;
+    margin: auto;
+    font-weight: 500;
+}
+
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.botaoProjeto {
+    display: flex;
+    background-color: #8012ED;
+    color: white;
+    width: auto;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoVerProjeto {
+    display: flex;
+    background-color: #36214A;
+    color: white;
+    width: auto;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@media screen and (min-width: 375px) {
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    margin: 0 0 0 0 ;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+.modalFundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1221;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp .5s ease-in;
+}
+
+.modalConteudo.fechar {
+  animation: slideDown .5s ease-in forwards;
+}
+
+.modalConteudoHeader {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+.botaoFechar {
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.modalConteudoImagem {
+    width: 100%;
+    height: 35rem;
+}
+
+.modalConteudo img {
+    width: 100%;
+    height: 100%;
+}
+
+.modalConteudoTextos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTextos h2, p {
+    margin: .5rem 0 0.5rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modalConteudoTextos p {
+    font-size: 13pt;
+}
+
+.modalConteudoTextos h2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+.modalConteudoTecnologias {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 5rem;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTecnologias h2 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+.quadradoSkills {
+    display: flex;
+    width: 7rem;
+    height: 2rem;
+    background: #36214A;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+}
+
+.quadradoSkills p {
+    font-size: 10pt;
+    margin: auto;
+    font-weight: 500;
+}
+
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.botaoProjeto {
+    display: flex;
+    background-color: #8012ED;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoVerProjeto {
+    display: flex;
+    background-color: #36214A;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@media screen and (min-width: 2560px) {
+.modalFundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1221;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp .5s ease-in;
+}
+
+.modalConteudo.fechar {
+  animation: slideDown .5s ease-in forwards;
+}
+
+.modalConteudoHeader {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+.botaoFechar {
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.modalConteudoImagem {
+    width: 45rem;
+    height: 30rem;
+}
+
+.modalConteudo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.modalConteudoTextos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.modalConteudoTextos h2, p {
+    margin: .5rem 0 0.5rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modalConteudoTextos p {
+    font-size: 13pt;
+}
+
+.modalConteudoTextos h2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+.modalConteudoTecnologias {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.modalConteudoTecnologias h2 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+.quadradoSkills {
+    display: flex;
+    width: 8rem;
+    height: 4rem;
+    background: #36214A;
+    border-radius: 5px;
+}
+
+.quadradoSkills p {
+    font-size: 15pt;
+    margin: auto;
+    font-weight: 500;
+}
+
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    height: auto;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.botaoProjeto {
+    display: flex;
+    background-color: #8012ED;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoVerProjeto {
+    display: flex;
+    background-color: #36214A;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100px); opacity: 0; }
+}
