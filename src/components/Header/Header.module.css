@@ -22,6 +22,7 @@ header {
 
 .tradutor {
     display: flex;
+    width: 2rem;
 }
 
 .language {
