@@ -758,9 +758,10 @@ input[type=number]::-webkit-inner-spin-button {
     align-items: center;
     width: 45%;
     height: 25rem;
-    margin: 0 0 auto 0;
+    margin: 3rem 0 0 0;
     box-sizing: border-box;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .quadradoProjetos img {
@@ -899,7 +900,7 @@ input[type=number]::-webkit-inner-spin-button {
     color: #fff;
     font-size: 15pt;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -909,6 +910,8 @@ input[type=number]::-webkit-inner-spin-button {
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 100%;
+    width: 100%;
+    padding: 0;
     animation: aparecerProjetos 1s ease-in-out;
 }
 
@@ -931,7 +934,7 @@ input[type=number]::-webkit-inner-spin-button {
     align-items: center;
     width: 25%;
     height: 25rem;
-    margin: 0 0 auto 0;
+    margin: 2rem 1rem 0 0;
     box-sizing: border-box;
     border-radius: 10px;
 }

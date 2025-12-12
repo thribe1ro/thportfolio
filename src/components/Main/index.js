@@ -5,16 +5,20 @@ import ScrollReveal from "scrollreveal";
 import estacionamento from "../../image/estacionamento.jpg";
 import fotoTh from "../../image/fotoTh.JPG";
 import semDor from "../../image/semdor.jpg";
+import cardapioQRCODE from "../../image/cardapioQRCODE.jpg";
+import cardapioDigital from "../../image/cardapioDigital.jpg";
 
 // import Components
 import BotaoEnviar from "../ArquivosJSX/BotaoEnviar";
 import EstacionamentoProjeto from "../ArquivosJSX/EstacionamentoProjeto";
 import SemDorProjeto from "../ArquivosJSX/SemDorProjeto";
+import CardapioQRCODE from "../ArquivosJSX/cardapioQRCODE";
+import CardapioDigital from "../ArquivosJSX/cardapioDigital";
 
 function Main({ language, activeSection }) {
   const [projetoAtivo, setProjetoAtivo] = useState(null);
 
-  const [nome, setNome] = useState("");
+const [nome, setNome] = useState("");
 const [telefone, setTelefone] = useState("");
 const [mensagem, setMensagem] = useState("");
 
@@ -82,6 +86,8 @@ const [mensagem, setMensagem] = useState("");
       MeusProjetos: "Meus Projetos",
       estacionamento: "Estacionamento",
       consultorio: "Consultório",
+      cardapioqrcode: "Cardápio QR Code",
+      cardapiodigital: "Cardápio Digital",
       NomeContato: "Nome",
       TelContato: "Telefone",
       MsgContato: "Mensagem",
@@ -100,6 +106,8 @@ const [mensagem, setMensagem] = useState("");
       MeusProjetos: "My Projects",
       estacionamento: "Parking",
       consultorio: "Dental Office",
+      cardapioqrcode: "QR Code Menu",
+      cardapiodigital: "Digital Menu",
       NomeContato: "Name",
       TelContato: "Phone",
       MsgContato: "Message",
@@ -141,7 +149,40 @@ const [mensagem, setMensagem] = useState("");
     VerCodigoFonte:
     language === "pt" ? "Ver Código Fonte" : "View Source Code",
     linkGithub: "https://github.com/thribe1ro/SemDorOdontologia",
+  };
+
+  const projetoCardapioQRCODE = {
+    titulo: translation[language].cardapioQRCODE,
+    descricao:
+      language === "pt"
+        ? "Site para bares, restaurantes e lanchonetes com cardapio digital para ler com QRCODE."
+        : "Website for bars, restaurants and cafes with digital menu to read with QRCODE.",
+    imagem: cardapioQRCODE,
+    link: "https://lanchonetedosamigos.netlify.app/",
+    TecnologiaUsadas: language === "pt" ? "Tecnologias usadas" : "Used technologies",
+    VerProjeto:
+    language === "pt" ? "Ver Projeto" : "See Project",
+    VerCodigoFonte:
+    language === "pt" ? "Ver Código Fonte" : "View Source Code",
+    linkGithub: "https://github.com/thribe1ro/cardapioLanchonete",
+  };
+
+    const projetoCardapioDigital = {
+    titulo: translation[language].cardapioDigital,
+    descricao:
+      language === "pt"
+        ? "Site para bares, restaurantes e lanchonetes com cardapio digital."
+        : "Website for bars, restaurants and cafes with digital menu.",
+    imagem: cardapioDigital,
+    link: "https://adegaum.netlify.app/",
+    TecnologiaUsadas: language === "pt" ? "Tecnologias usadas" : "Used technologies",
+    VerProjeto:
+    language === "pt" ? "Ver Projeto" : "See Project",
+    VerCodigoFonte:
+    language === "pt" ? "Ver Código Fonte" : "View Source Code",
+    linkGithub: "https://github.com/thribe1ro/adegaUm",
   }
+
 
   return (
 
@@ -204,6 +245,14 @@ const [mensagem, setMensagem] = useState("");
             <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoSemDor)}>
               <img src={semDor} alt="Projeto 2" />
               <p>{translation[language].consultorio}</p>
+            </div>
+            <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoCardapioQRCODE)}>
+              <img src={cardapioQRCODE} alt="Projeto 3" />
+              <p>{translation[language].cardapioqrcode}</p>
+            </div>
+            <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoCardapioDigital)}>
+              <img src={cardapioDigital} alt="Projeto 4" />
+              <p>{translation[language].cardapiodigital}</p>
             </div>
           </div>
         </div>
@@ -271,6 +320,22 @@ const [mensagem, setMensagem] = useState("");
 
       {projetoAtivo && projetoAtivo.titulo === translation[language].consultorio && (
   <SemDorProjeto
+    projeto={projetoAtivo}
+    onClose={() => setProjetoAtivo(null)}
+    
+  />
+)}
+
+      {projetoAtivo && projetoAtivo.titulo === translation[language].cardapioQRCODE && (
+  <CardapioQRCODE
+    projeto={projetoAtivo}
+    onClose={() => setProjetoAtivo(null)}
+    
+  />
+)}
+
+      {projetoAtivo && projetoAtivo.titulo === translation[language].cardapioDigital && (
+  <CardapioDigital
     projeto={projetoAtivo}
     onClose={() => setProjetoAtivo(null)}
     

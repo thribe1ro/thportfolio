@@ -615,11 +615,12 @@
 @media screen and (min-width: 1440px) {
     main {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         flex-direction: column;
         font-family: "Space Grotesk", sans-serif;
         font-weight: bold;
+        height: 150dvh;
     }
 
     section {
@@ -757,6 +758,7 @@
     main {
         display: flex;
         flex-direction: column;
+        height: 120dvh;
     }
 
     section {

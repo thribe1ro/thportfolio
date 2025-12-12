@@ -467,6 +467,157 @@
 
 }
 
+@media screen and (min-width: 1440px) {
+.modalFundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A1221;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp .5s ease-in;
+}
+
+.modalConteudo.fechar {
+  animation: slideDown .5s ease-in forwards;
+}
+
+.modalConteudoHeader {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+
+.botaoFechar {
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+
+.modalConteudoImagem { /* MUDAR */
+    width: 50%;
+    height: 20rem;
+}
+
+.modalConteudo img {
+    width: 100%;
+    height: 100%;
+}
+
+.modalConteudoTextos {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTextos h2, p {
+    margin: .5rem 0 0.5rem 0;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modalConteudoTextos p {
+    font-size: 13pt;
+}
+
+.modalConteudoTextos h2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+.modalConteudoTecnologias {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 10rem; /* MUDAR */
+    align-items: start;
+    padding: 0 0 0 1rem;
+    margin: 0;
+}
+
+.modalConteudoTecnologias h2 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+.quadradoSkills {
+    display: flex;
+    width: 10rem; /* MUDAR */
+    height: 3rem; /* MUDAR */
+    background: #36214A;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+}
+
+.quadradoSkills p {
+    font-size: 10pt;
+    margin: auto;
+    font-weight: 500;
+}
+
+.modalConteudoBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.botaoProjeto {
+    display: flex;
+    background-color: #8012ED;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoVerProjeto {
+    display: flex;
+    background-color: #36214A;
+    color: white;
+    width: auto;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
 @media screen and (min-width: 2560px) {
 .modalFundo {
   position: fixed;
