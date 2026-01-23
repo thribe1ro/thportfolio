@@ -2,9 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Main.module.css";
 import style from "./Projetos.module.css";
 import ScrollReveal from "scrollreveal";
+/* Import Images */
 import estacionamento from "../../image/estacionamento.jpg";
 import fotoTh from "../../image/fotoTh.JPG";
 import semDor from "../../image/semdor.jpg";
+import fotoaplicativo from "../../image/fotoaplicativo.jpg";
+import fotoautomacao from "../../image/fotoautomacao.jpg";
 import cardapioQRCODE from "../../image/cardapioQRCODE.jpg";
 import cardapioDigital from "../../image/cardapioDigital.jpg";
 
@@ -14,6 +17,8 @@ import EstacionamentoProjeto from "../ArquivosJSX/EstacionamentoProjeto";
 import SemDorProjeto from "../ArquivosJSX/SemDorProjeto";
 import CardapioQRCODE from "../ArquivosJSX/cardapioQRCODE";
 import CardapioDigital from "../ArquivosJSX/cardapioDigital";
+import AplicativoProjeto from "../ArquivosJSX/aplicativoProjeto";
+import AutomacaoProjeto from "../ArquivosJSX/automacaoProjeto";
 
 function Main({ language, activeSection }) {
   const [projetoAtivo, setProjetoAtivo] = useState(null);
@@ -27,6 +32,7 @@ const [mensagem, setMensagem] = useState("");
   const quadradoDois = useRef(null);
   const quadradoTres = useRef(null);
   const quadradoQuatro = useRef(null);
+  const quadradoCinco = useRef(null);
 
   useEffect(() => {
     if (primeiroQuadradoRef.current) {
@@ -74,6 +80,15 @@ const [mensagem, setMensagem] = useState("");
         reset: true,
       });
     }
+    if (quadradoCinco.current) {
+      ScrollReveal().reveal(quadradoCinco.current, {
+        origin: "right",
+        distance: "100px",
+        duration: 500,
+        easing: "ease-in-out",
+        reset: true,
+      });
+    }
   }, []);
 
   const translation = {
@@ -88,6 +103,8 @@ const [mensagem, setMensagem] = useState("");
       consultorio: "Consultório",
       cardapioqrcode: "Cardápio QR Code",
       cardapiodigital: "Cardápio Digital",
+      aplicativo: "Aplicativo de Monitoramento de Industrial",
+      fluxos: "Fluxos de Trabalho",
       NomeContato: "Nome",
       TelContato: "Telefone",
       MsgContato: "Mensagem",
@@ -108,6 +125,8 @@ const [mensagem, setMensagem] = useState("");
       consultorio: "Dental Office",
       cardapioqrcode: "QR Code Menu",
       cardapiodigital: "Digital Menu",
+      aplicativo: "Industrial Monitoring App",
+      fluxos: "Workflows",
       NomeContato: "Name",
       TelContato: "Phone",
       MsgContato: "Message",
@@ -167,7 +186,7 @@ const [mensagem, setMensagem] = useState("");
     linkGithub: "https://github.com/thribe1ro/cardapioLanchonete",
   };
 
-    const projetoCardapioDigital = {
+  const projetoCardapioDigital = {
     titulo: translation[language].cardapioDigital,
     descricao:
       language === "pt"
@@ -181,7 +200,40 @@ const [mensagem, setMensagem] = useState("");
     VerCodigoFonte:
     language === "pt" ? "Ver Código Fonte" : "View Source Code",
     linkGithub: "https://github.com/thribe1ro/adegaUm",
+  } 
+
+  const projetoAplicativo = {
+    titulo: translation[language].aplicativo,
+    descricao:
+      language === "pt"
+        ? "Aplicativo de monitoramento industrial com controle de temperatura e umidade."
+        : "Industrial monitoring app with temperature and humidity control.",
+    imagem: fotoaplicativo,
+    link: "https://aplicativoindustrial.netlify.app/",
+    TecnologiaUsadas: language === "pt" ? "Tecnologias usadas" : "Used technologies",
+    VerProjeto:
+    language === "pt" ? "Ver Projeto" : "See Project",
+    VerCodigoFonte:
+    language === "pt" ? "Ver Código Fonte" : "View Source Code",
+    linkGithub: "https://github.com/thribe1ro/aplicativoIndustrial",
+  } 
+
+  const automacaoProjeto = {
+    titulo: translation[language].fluxos,
+    descricao:
+      language === "pt"
+        ? "Automação de fluxos com fotos de pagamentos mandando diretamente para uma planinha no Excel."
+        : "Payment flow automation with payment photos sending directly to an Excel spreadsheet.",
+    imagem: fotoautomacao,
+    link: "https://aplicativoindustrial.netlify.app/",
+    TecnologiaUsadas: language === "pt" ? "Tecnologias usadas" : "Used technologies",
+    VerProjeto:
+    language === "pt" ? "Ver Projeto" : "See Project",
+    VerCodigoFonte:
+    language === "pt" ? "Ver Código Fonte" : "View Source Code",
+    linkGithub: "https://github.com/thribe1ro/aplicativoIndustrial",
   }
+  
 
 
   return (
@@ -223,7 +275,16 @@ const [mensagem, setMensagem] = useState("");
             <div ref={quadradoQuatro} className={styles.quadradoSkills}>
               <p>ReactJS</p>
             </div>
-          </div>
+            <div ref={quadradoQuatro} className={styles.quadradoSkills}>
+              <p>ReactNative</p>
+              </div>
+            <div ref={quadradoQuatro} className={styles.quadradoSkills}>
+              <p>NextJS</p>
+            </div>
+            <div ref={quadradoCinco} className={styles.quadradoSkills}>
+              <p>Automação de fluxos</p>
+            </div>
+            </div>
         </section>
       </section>
 
@@ -246,12 +307,20 @@ const [mensagem, setMensagem] = useState("");
               <img src={semDor} alt="Projeto 2" />
               <p>{translation[language].consultorio}</p>
             </div>
+            <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoAplicativo)}>
+              <img src={fotoaplicativo} alt="Projeto 3" />
+              <p>{translation[language].aplicativo}</p>
+            </div>
+            <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(automacaoProjeto)}>
+              <img src={fotoautomacao} alt="Projeto 4" />
+              <p>{translation[language].fluxos}</p>
+            </div>
             <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoCardapioQRCODE)}>
-              <img src={cardapioQRCODE} alt="Projeto 3" />
+              <img src={cardapioQRCODE} alt="Projeto 5" />
               <p>{translation[language].cardapioqrcode}</p>
             </div>
             <div className={style.quadradoProjetos} onClick={() => setProjetoAtivo(projetoCardapioDigital)}>
-              <img src={cardapioDigital} alt="Projeto 4" />
+              <img src={cardapioDigital} alt="Projeto 6" />
               <p>{translation[language].cardapiodigital}</p>
             </div>
           </div>
@@ -336,6 +405,22 @@ const [mensagem, setMensagem] = useState("");
 
       {projetoAtivo && projetoAtivo.titulo === translation[language].cardapioDigital && (
   <CardapioDigital
+    projeto={projetoAtivo}
+    onClose={() => setProjetoAtivo(null)}
+    
+  />
+)}
+
+      {projetoAtivo && projetoAtivo.titulo === translation[language].aplicativo && (
+  <AplicativoProjeto
+    projeto={projetoAtivo}
+    onClose={() => setProjetoAtivo(null)}
+    
+  />
+)} 
+
+      {projetoAtivo && projetoAtivo.titulo === translation[language].fluxos && (
+  <AutomacaoProjeto
     projeto={projetoAtivo}
     onClose={() => setProjetoAtivo(null)}
     
