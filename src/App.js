@@ -11,7 +11,7 @@ function App() {
     <>
       <Header onLanguageChange={setLanguage} activeSection={activeSection} />
       <Main language={language} activeSection={activeSection} />
-      <Footer language={language} setActiveSection={setActiveSection}/>
+      
     </>
   );
 }

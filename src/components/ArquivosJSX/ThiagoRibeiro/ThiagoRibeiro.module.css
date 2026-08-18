@@ -1,0 +1,55 @@
+* {
+    font-family: 'Courier New', ;
+}
+
+:root {
+    --CorCinzaEscuro: #121314;
+    --CorCinzaClaro: #191a1b;
+    --CorCinzaSearch: #191a1b;
+    --CorCinzaDivisao: #2a2b2c;
+    --CorAzulDivisao: #3994bc;
+    --CorSelecionador: #2c2d2e;
+    --CorTextoBarraPesquisa: #5e5e5f;
+}
+
+
+
+@media screen and (min-width: 2560px) {
+    .Content {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        background: var(--CorCinzaEscuro);
+        border-right: 1px solid var(--CorCinzaDivisao);
+        border-bottom: 1px solid var(--CorCinzaEscuro);
+        border-top: 1px solid var(--CorAzulDivisao);
+    }
+
+    .ThiagoRibeiroContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+
+    .ThiagoRibeiroContent h1 {
+        font-family: 'Courier New', ;
+        font-size: 12pt;
+        font-weight: 300;
+        color: #ffffff;
+    }
+
+    .headerContentSVG {
+        width: 1.2rem;
+        height: 1.2rem;
+
+}
+}
+
